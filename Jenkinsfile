@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'mvn clean install -DskipTests'
                 // 4利用dockerfile生成容器镜像，dockerfile就在当前项目根目录下
-                sh 'sudo docker build -t registry.cn-hangzhou.aliyuncs.com/rancher_k8s_ks02/k8s:cd_test_01 .'
+                sh 'docker build -t registry.cn-hangzhou.aliyuncs.com/rancher_k8s_ks02/k8s:cd_test_01 .'
             }
         }
         stage('PushImage') {
