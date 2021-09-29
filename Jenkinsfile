@@ -20,11 +20,11 @@ pipeline {
                 sh 'docker rmi -f registry.cn-hangzhou.aliyuncs.com/rancher_k8s_ks02/k8s:cd_test_01'
             }
         }
-//         stage('Deploy') {
-//             steps {
-//                 sh 'sudo sh /opt/Start.sh'
-//             }
-//         }
+        stage('Deploy') {
+            steps {
+                sh 'sh ./start.sh'
+            }
+        }
     }
 }
 
