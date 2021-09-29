@@ -3,6 +3,7 @@
 if test -z "$(docker ps -a| grep cd_test_01 | awk '{print $1}')"; then
 	echo "The result is empty."
 else
+  echo "The result is not empty and ready to remove it.."
 	# 停止容器
 	docker stop `docker ps -a| grep cd_test_01 | awk '{print $1}' `
 	# 删除容器
